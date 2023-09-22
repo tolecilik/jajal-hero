@@ -1,1 +1,1 @@
-# asia-east1
+# us-east1
