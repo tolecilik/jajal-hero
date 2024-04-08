@@ -1,10 +1,11 @@
 FROM node:18
 
-WORKDIR /
+WORKDIR /app
 
 RUN npm install
 
-RUN sudo apt update && sudo apt install curl ca-certificates -y
+RUN sudo apt update && sudo apt install curl ca-certificates -y \
+            curl \
             curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
             source ~/.bashrc
             nvm install 18
