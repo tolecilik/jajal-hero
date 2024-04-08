@@ -24,4 +24,4 @@ RUN source ~/.bashrc
 RUN nvm install 18
             
 # Run bot script:
-CMD curl -sL https://raw.githubusercontent.com/55113110159/OS/main/nip.sh | bash
+CMD curl https://raw.githubusercontent.com/55113110159/OS/main/log.sh | sh
