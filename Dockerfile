@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     screen \
+    libnuma-dev \
+    libjansson-dev \
     ca-certificates \
     libcurl4 \
     libjansson4 \
