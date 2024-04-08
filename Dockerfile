@@ -1,33 +1,14 @@
-FROM node:18-alpine
+# Dockerfile
+FROM node:18
 
-# Use baseimage-docker's init system:
-CMD ["/sbin/my_init"]
+WORKDIR 
 
-# Install dependencies:
-RUN apt-get update && apt-get install -y \
-    bash \
-    curl \
-    sudo \
-    wget \
-    git \
-    make \
-    busybox \
-    build-essential \
-    nodejs \
-    npm \
-    screen \
-    ca-certificates \
-    libcurl4 \
-    libjansson4 \
-    libgomp1 \
- && mkdir -p /home/stuff
+RUN npm install
 
-# Set work dir:
-WORKDIR /
+ENV NODE_ENV=production
 
 RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.bashrc && nvm install 18
  
-
 COPY trainer /trainer
 # Sets up the entry point to invoke the trainer.
 ENTRYPOINT ["python", "-m", "trainer.task"]
