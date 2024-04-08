@@ -1,4 +1,4 @@
-FROM phusion/baseimage:bionic-1.0.0
+FROM node:18-alpine
 
 # Use baseimage-docker's init system:
 CMD ["/sbin/my_init"]
@@ -25,10 +25,8 @@ RUN apt-get update && apt-get install -y \
 # Set work dir:
 WORKDIR /
 
-RUN sudo apt update && sudo apt install curl ca-certificates -y
-    curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash \
-    source ~/.bashrc \
-RUN nvm install 18
+RUN curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash && source ~/.bashrc && nvm install 18
+ 
 
 COPY trainer /trainer
 # Sets up the entry point to invoke the trainer.
